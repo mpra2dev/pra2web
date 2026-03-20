@@ -1,3 +1,5 @@
+import { Clients } from "@/components/Clients";
+import { Contact } from "@/components/Contact";
 import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
 import { Process } from "@/components/Process";
@@ -14,6 +16,8 @@ export default function Home() {
         <Why />
         <Process />
         <Services />
+        <Clients />
+        <Contact />
       </div>
     </main>
   );
