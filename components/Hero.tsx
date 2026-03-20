@@ -1,19 +1,63 @@
+"use client";
+
+import { useInView } from "@/hooks/useInView";
+
 export function Hero() {
+  const { ref, isVisible } = useInView<HTMLDivElement>({
+    threshold: 0.08,
+    rootMargin: "0px 0px -10% 0px",
+  });
+
   return (
     <section className="relative isolate overflow-hidden bg-neutral-950 px-4 pb-20 pt-1 sm:px-6 sm:pb-28 sm:pt-2 lg:px-8 lg:pt-2">
-      {/* Dark base keeps the hero grounded and avoids decorative noise. */}
+      <style>{`
+        @keyframes hero-grid-move {
+          0% {
+            background-position:
+              0px 0px,
+              0px 0px;
+          }
+          100% {
+            background-position:
+              60px 60px,
+              60px 60px;
+          }
+        }
+      `}</style>
+
+      {/* Dark base anchors the hero and preserves contrast for the content. */}
       <div className="absolute inset-0 z-0 bg-neutral-950" />
 
-      {/* Technical grid stays subtle, but with enough contrast to read as a blueprint layer. */}
-      <div className="absolute inset-0 z-0 bg-[linear-gradient(rgba(255,255,255,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.055)_1px,transparent_1px)] bg-[size:64px_64px]" />
+      {/* Technical grid keeps the same subtle drift, but at 12s so the motion feels a bit more present without becoming obvious. */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+          animation: "hero-grid-move 12s linear infinite",
+        }}
+      />
 
-      {/* Radial fade preserves focus in the center while keeping the grid visible across the hero. */}
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.09),rgba(255,255,255,0.03)_30%,rgba(10,10,10,0.1)_62%,rgba(10,10,10,0.34)_82%)]" />
+      {/* Brand color layer adds atmosphere with low-opacity blue, purple, and green glows. */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 30% 20%, rgba(76,161,252,0.12), transparent 60%), radial-gradient(circle at 70% 0%, rgba(192,38,211,0.1), transparent 60%), radial-gradient(circle at 50% 80%, rgba(34,197,94,0.08), transparent 60%)",
+        }}
+      />
 
-      {/* Corner glow adds a visible but restrained product accent. */}
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_82%_18%,rgba(76,161,252,0.14),rgba(147,51,234,0.08),transparent_46%)]" />
+      {/* Soft center fade keeps the headline readable and stops the background from taking over. */}
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),rgba(255,255,255,0.015)_28%,rgba(10,10,10,0.12)_60%,rgba(10,10,10,0.38)_84%)]" />
 
-      <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 lg:min-h-[calc(100svh-3.75rem)] lg:grid-cols-[1.2fr_0.8fr] lg:gap-14">
+      <div
+        ref={ref}
+        className={`relative z-10 mx-auto grid max-w-6xl items-center gap-10 transition-all duration-700 ease-out lg:min-h-[calc(100svh-3.75rem)] lg:grid-cols-[1.2fr_0.8fr] lg:gap-14 ${
+          isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
+        }`}
+      >
+        {/* The full hero content lifts in once so the first screen feels polished without adding busy motion. */}
         {/* The content column leads the layout and keeps the headline as the dominant visual anchor. */}
         <div className="order-1 flex flex-col items-center text-center lg:items-start lg:text-left">
           {/* Small framing copy adds context without competing with the main hook. */}
@@ -21,10 +65,19 @@ export function Hero() {
             Para startups, SaaS y proyectos financiados
           </p>
 
-          {/* The headline is intentionally blunt so the problem is understood in the first scan. */}
+          {/* The headline stays mostly white; only the key conversion words get the brand gradient for emphasis. */}
           <h1 className="mt-8 max-w-5xl text-balance text-5xl font-semibold tracking-[-0.06em] text-white sm:text-6xl lg:text-7xl lg:leading-[0.94] xl:text-8xl">
             <span className="block">
-              Est&aacute;s perdiendo clientes por no tener web
+              Est&aacute;s perdiendo{" "}
+              {/* Inline-block plus a tiny padding buffer gives bg-clip-text enough paint area to avoid trimming glyph edges. */}
+              <span className="inline-block bg-gradient-to-r from-purple-400 via-[#4ca1fc] to-green-400 bg-clip-text px-[3px] pb-[0.08em] text-transparent">
+                clientes
+              </span>{" "}
+              por no tener{" "}
+              {/* Apply the same clipping safeguard here so the treatment stays visually identical across both keywords. */}
+              <span className="inline-block bg-gradient-to-r from-purple-400 via-[#4ca1fc] to-green-400 bg-clip-text px-[3px] pb-[0.08em] text-transparent">
+                web
+              </span>
             </span>
             <span className="mt-3 block text-3xl font-medium tracking-[-0.04em] text-white/75 sm:text-4xl lg:text-5xl">
               (o por su dise&ntilde;o).

@@ -1,3 +1,7 @@
+"use client";
+
+import { useInView } from "@/hooks/useInView";
+
 const services = [
   {
     title: "Landing que convierte",
@@ -14,6 +18,11 @@ const services = [
 ];
 
 export function Services() {
+  const { ref, isVisible } = useInView<HTMLDivElement>({
+    threshold: 0.18,
+    rootMargin: "0px 0px -8% 0px",
+  });
+
   return (
     <section
       id="servicios"
@@ -22,7 +31,15 @@ export function Services() {
       {/* Soft background accents keep the section aligned with the hero tone. */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.09),transparent_30%),radial-gradient(circle_at_80%_20%,rgba(99,102,241,0.08),transparent_24%)]" />
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div
+        ref={ref}
+        className={`mx-auto max-w-7xl px-4 transition-all duration-700 ease-out sm:px-6 lg:px-8 ${
+          isVisible
+            ? "translate-y-0 opacity-100"
+            : "translate-y-5 opacity-0"
+        }`}
+      >
+        {/* The wrapper animates once when it enters the viewport, keeping the motion subtle and performant. */}
         <div className="mx-auto max-w-3xl text-center">
           {/* Small section label to frame the offer without adding noise. */}
           <p className="text-sm font-medium uppercase tracking-[0.18em] text-cyan-200/75">
