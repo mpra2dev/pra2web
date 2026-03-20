@@ -1,3 +1,5 @@
+import { Logo } from "@/components/Logo";
+
 const navItems = [
   { label: "Servicios", href: "#servicios" },
   { label: "Proceso", href: "#proceso" },
@@ -10,9 +12,9 @@ export function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-stretch justify-between px-4 sm:px-6 lg:px-8">
         <a
           href="#"
-          className="inline-flex items-center text-[0.98rem] font-semibold tracking-[0.01em] text-white transition-opacity duration-200 hover:opacity-90"
+          className="group flex h-full items-center text-white transition-transform duration-300 hover:-translate-y-[1px]"
         >
-          pra2dev
+          <Logo className="h-8 w-auto" />
         </a>
 
         <div className="flex h-full items-stretch gap-4 sm:gap-5">

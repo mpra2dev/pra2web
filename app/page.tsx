@@ -1,5 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
+import { Services } from "@/components/Services";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
         <div className="absolute inset-0 -z-20 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),transparent_18%),radial-gradient(circle_at_top,rgba(255,255,255,0.05),transparent_30%)]" />
         <Navbar />
         <Hero />
+        <Services />
       </div>
     </main>
   );
