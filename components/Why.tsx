@@ -79,25 +79,37 @@ const reasons = [
     title: "Velocidad real",
     icon: BoltIcon,
     description:
-      "Tu landing lista en dias, no en meses. Reducimos friccion, ejecutamos rapido y priorizamos salir antes al mercado para empezar a captar oportunidades cuanto antes.",
+      "Tu landing lista en dias, no en meses. Reducimos friccion, cerramos decisiones rapido y priorizamos salir antes al mercado.",
+    tag: "Entrega rapida",
+    accent:
+      "from-[rgba(76,161,252,0.22)] via-[rgba(255,255,255,0.08)] to-transparent",
   },
   {
     title: "Enfoque en conversion",
     icon: PathIcon,
     description:
-      "Cada seccion esta pensada para guiar al usuario hacia una accion concreta. No decoramos pantallas: ordenamos el mensaje para que la visita avance y convierta.",
+      "Cada seccion existe para mover al usuario a la siguiente accion. Ordenamos el mensaje para que la visita avance y convierta.",
+    tag: "Mensaje con direccion",
+    accent:
+      "from-[rgba(168,85,247,0.22)] via-[rgba(76,161,252,0.14)] to-transparent",
   },
   {
     title: "Pensado para subvenciones",
     icon: ShieldIcon,
     description:
-      "Entendemos como funcionan estos procesos y lo que necesita un proyecto financiado: velocidad, claridad, buena presentacion y una web que tenga sentido tambien para negocio.",
+      "Entendemos lo que necesita un proyecto financiado: velocidad, buena presentacion y una web que tenga sentido tambien para negocio.",
+    tag: "Contexto real",
+    accent:
+      "from-[rgba(34,197,94,0.2)] via-[rgba(76,161,252,0.12)] to-transparent",
   },
   {
     title: "Mentalidad de producto",
     icon: CubeIcon,
     description:
-      "No entregamos una web para dejarla ahi. Construimos una herramienta comercial que debe ayudar a validar propuesta, generar confianza y abrir conversaciones de venta.",
+      "No entregamos una web para dejarla ahi. Construimos una herramienta comercial lista para apoyar ventas, validacion y crecimiento.",
+    tag: "Pensado para iterar",
+    accent:
+      "from-[rgba(255,255,255,0.12)] via-[rgba(168,85,247,0.16)] to-transparent",
   },
 ];
 
@@ -107,58 +119,125 @@ export function Why() {
     rootMargin: "0px 0px -8% 0px",
   });
 
+  const featuredReasons = reasons.slice(0, 2);
+  const secondaryReasons = reasons.slice(2);
+
   return (
     <section
       id="porque"
       className="relative overflow-hidden bg-neutral-950 py-24 sm:py-28"
     >
-      {/* Subtle ambient gradients keep the section visually connected to the hero without stealing attention from the content. */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(76,161,252,0.08),transparent_32%),radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.08),transparent_26%),radial-gradient(circle_at_bottom,rgba(34,197,94,0.06),transparent_34%)]" />
+      {/* Richer ambient layers make this section feel like a key trust block instead of a plain feature list. */}
+      <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_top_left,rgba(76,161,252,0.1),transparent_30%),radial-gradient(circle_at_82%_18%,rgba(168,85,247,0.1),transparent_24%),radial-gradient(circle_at_bottom,rgba(34,197,94,0.08),transparent_30%)]" />
+      <div className="absolute inset-x-0 top-0 -z-10 h-36 bg-[linear-gradient(180deg,rgba(255,255,255,0.035),transparent)]" />
 
       <div
         ref={ref}
         className={`mx-auto max-w-7xl px-4 transition-all duration-700 ease-out sm:px-6 lg:px-8 ${
-          isVisible
-            ? "translate-y-0 opacity-100"
-            : "translate-y-5 opacity-0"
+          isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
         }`}
       >
-        {/* This single wrapper keeps the section reveal smooth and consistent with the rest of the page. */}
-        <div className="mx-auto max-w-3xl text-center">
-          {/* Compact section framing introduces the argument before the cards do the detailed persuasion work. */}
-          <p className="text-sm font-medium uppercase tracking-[0.18em] text-cyan-200/75">
-            Diferencia
-          </p>
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:gap-10">
+          <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-8 shadow-[0_30px_80px_rgba(0,0,0,0.22)] sm:p-10">
+            {/* This panel establishes the positioning before the detailed reasons, giving the section a clear focal point. */}
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(76,161,252,0.18),transparent_40%),radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.16),transparent_34%),radial-gradient(circle_at_bottom,rgba(34,197,94,0.12),transparent_36%)]" />
+            <div className="pointer-events-none absolute inset-x-10 top-0 h-px bg-white/12" />
 
-          <h2 className="mt-5 text-balance text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl lg:text-5xl">
-            &iquest;Por qu&eacute; pra2dev?
-          </h2>
+            <div className="relative z-10">
+              <p className="text-sm font-medium uppercase tracking-[0.18em] text-cyan-200/75">
+                Diferencia
+              </p>
 
-          <p className="mt-5 text-pretty text-base leading-7 text-neutral-300 sm:text-lg sm:leading-8">
-            Porque no hacemos webs. Construimos herramientas para generar
-            clientes.
-          </p>
+              <h2 className="mt-5 text-balance text-3xl font-semibold tracking-[-0.05em] text-white sm:text-4xl">
+                &iquest;Por qu&eacute; pra2dev?
+              </h2>
+
+              <p className="mt-5 text-pretty text-base leading-8 text-neutral-200 sm:text-lg">
+                Porque no hacemos webs para rellenar presencia digital.
+                Construimos una herramienta comercial con claridad, velocidad y
+                una ejecucion que se nota desde el primer scroll.
+              </p>
+
+              <div className="mt-10 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 backdrop-blur-sm">
+                  <p className="text-sm font-medium uppercase tracking-[0.16em] text-neutral-400">
+                    Lo que cambia
+                  </p>
+                  <p className="mt-3 text-base font-medium text-white">
+                    Menos ruido, mas direccion y mejor conversion.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 backdrop-blur-sm">
+                  <p className="text-sm font-medium uppercase tracking-[0.16em] text-neutral-400">
+                    En la practica
+                  </p>
+                  <p className="mt-3 text-base font-medium text-white">
+                    Una web lista para vender, no solo para verse bien.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {featuredReasons.map((reason) => (
+              <article
+                key={reason.title}
+                className="group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/8 hover:shadow-[0_22px_48px_rgba(0,0,0,0.2)]"
+              >
+                {/* Featured reasons get a little more visual weight because they carry the strongest differentiators. */}
+                <div
+                  className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${reason.accent} opacity-100`}
+                />
+
+                <div className="relative z-10">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/10 text-cyan-100 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
+                    <reason.icon className="h-5 w-5" aria-hidden="true" />
+                  </div>
+
+                  <div className="mt-6 rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs font-medium uppercase tracking-[0.16em] text-cyan-200/80">
+                    {reason.tag}
+                  </div>
+
+                  <h3 className="mt-6 text-2xl font-semibold tracking-[-0.04em] text-white">
+                    {reason.title}
+                  </h3>
+
+                  <p className="mt-4 text-base leading-7 text-neutral-300">
+                    {reason.description}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
-          {reasons.map((reason) => (
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+          {secondaryReasons.map((reason) => (
             <article
               key={reason.title}
-              className="rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/8 hover:shadow-[0_18px_40px_rgba(0,0,0,0.18)] sm:p-10"
+              className="group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/8 hover:shadow-[0_20px_45px_rgba(0,0,0,0.2)]"
             >
-              {/* The icon sits in a restrained badge so it supports recognition without overpowering the copy. */}
-              <div className="flex items-start gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/6 text-cyan-200/85 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+              {/* The lower row stays slightly calmer so the hierarchy remains clear across the whole section. */}
+              <div
+                className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${reason.accent} opacity-100`}
+              />
+
+              <div className="relative z-10 flex items-start gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/10 text-cyan-100 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
                   <reason.icon className="h-5 w-5" aria-hidden="true" />
                 </div>
 
                 <div>
-              {/* Each card is intentionally brief so the section stays scannable while still building trust through specificity. */}
-                  <h3 className="text-xl font-semibold tracking-[-0.02em] text-white sm:text-2xl">
+                  <div className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs font-medium uppercase tracking-[0.16em] text-cyan-200/80">
+                    {reason.tag}
+                  </div>
+
+                  <h3 className="mt-5 text-2xl font-semibold tracking-[-0.04em] text-white">
                     {reason.title}
                   </h3>
 
-                  <p className="mt-4 max-w-xl text-base leading-7 text-neutral-300 sm:text-lg sm:leading-8">
+                  <p className="mt-4 text-base leading-7 text-neutral-300">
                     {reason.description}
                   </p>
                 </div>
@@ -168,10 +247,9 @@ export function Why() {
         </div>
 
         <div className="mt-12 flex justify-center">
-          {/* Reusing the main gradient CTA keeps the conversion path consistent across the landing. */}
           <a
             href="#contacto"
-            className="inline-flex items-center justify-center rounded-lg bg-[linear-gradient(45deg,#a855f7_0%,#4ca1fc_52%,#22c55e_100%)] px-5 py-3 text-sm font-semibold tracking-[0.01em] text-white shadow-[0_10px_28px_rgba(76,161,252,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(34,197,94,0.18)]"
+            className="inline-flex items-center justify-center rounded-lg bg-[linear-gradient(45deg,#a855f7_0%,#4ca1fc_52%,#22c55e_100%)] px-6 py-3 text-sm font-semibold tracking-[0.01em] text-white shadow-[0_10px_28px_rgba(76,161,252,0.22)] transition-all duration-200 ease-out hover:scale-[1.02] hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(34,197,94,0.18)] active:scale-[0.98]"
           >
             Solicitar propuesta
           </a>

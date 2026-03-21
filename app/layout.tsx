@@ -22,11 +22,8 @@ export const metadata: Metadata = {
   },
   description: "Landing pages que convierten visitas en clientes",
   icons: {
-    icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon.svg", rel: "shortcut icon", type: "image/svg+xml" },
-    ],
-    apple: "/favicon.svg",
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
   },
 };
 

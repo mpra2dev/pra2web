@@ -89,90 +89,90 @@ function ShowcaseRail({
 
   return (
     <div className="mt-14">
-      <div className="flex items-end justify-between gap-6">
+      <div>
         <div>
           <h3 className="text-2xl font-semibold tracking-[-0.04em] text-white sm:text-3xl">
             {title}
           </h3>
           <p className="mt-3 text-base leading-7 text-neutral-400">{subtitle}</p>
         </div>
-
-        {/* Desktop arrows replace the old autoplay so the rail feels more deliberate and easier to control. */}
-        <div className="hidden items-center gap-3 md:flex">
-          <button
-            type="button"
-            aria-label={`Desplazar ${title} a la izquierda`}
-            onClick={() => scrollRail("left")}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/80 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/8 hover:text-white"
-          >
-            <ArrowLeftIcon />
-          </button>
-          <button
-            type="button"
-            aria-label={`Desplazar ${title} a la derecha`}
-            onClick={() => scrollRail("right")}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/80 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/8 hover:text-white"
-          >
-            <ArrowRightIcon />
-          </button>
-        </div>
       </div>
 
-      {/* The rail uses native horizontal scrolling so mobile gets touch scroll and desktop gets button-driven movement without loop artifacts. */}
-      <div
-        ref={railRef}
-        className="mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-3 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
-      >
-        {items.map((item) => {
-          const logoFailed = item.logo ? failedLogos[item.name] : true;
-          const content = (
-            <div className="group relative flex h-32 w-[16rem] shrink-0 snap-start items-center justify-center overflow-hidden rounded-lg border border-white/10 bg-white/5 px-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/15 hover:bg-white/8">
-              <div className="relative z-10 flex h-16 w-full items-center justify-center">
-                {!logoFailed && item.logo ? (
-                  <Image
-                    src={item.logo}
-                    alt={item.name}
-                    width={144}
-                    height={64}
-                    className="h-14 w-auto object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100"
-                    onError={() => onLogoError(item.name)}
-                  />
-                ) : (
-                  <div className="text-center">
-                    <span className="block text-lg font-medium tracking-tight text-white">
+      <div className="relative mt-8">
+        {/* Desktop arrows sit on the rail sides so the interaction reads like a carousel, while mobile keeps native touch scrolling. */}
+        <button
+          type="button"
+          aria-label={`Desplazar ${title} a la izquierda`}
+          onClick={() => scrollRail("left")}
+          className="absolute left-0 top-1/2 z-10 hidden h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-neutral-950/85 text-white/80 backdrop-blur-sm transition-all duration-200 hover:scale-[1.02] hover:border-white/20 hover:bg-white/8 hover:text-white active:scale-[0.98] md:inline-flex"
+        >
+          <ArrowLeftIcon />
+        </button>
+        <button
+          type="button"
+          aria-label={`Desplazar ${title} a la derecha`}
+          onClick={() => scrollRail("right")}
+          className="absolute right-0 top-1/2 z-10 hidden h-11 w-11 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-neutral-950/85 text-white/80 backdrop-blur-sm transition-all duration-200 hover:scale-[1.02] hover:border-white/20 hover:bg-white/8 hover:text-white active:scale-[0.98] md:inline-flex"
+        >
+          <ArrowRightIcon />
+        </button>
+
+        {/* The rail uses native horizontal scrolling so mobile gets touch scroll and desktop gets button-driven movement without loop artifacts. */}
+        <div
+          ref={railRef}
+          className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-3 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        >
+          {items.map((item) => {
+            const logoFailed = item.logo ? failedLogos[item.name] : true;
+            const content = (
+              <div className="group relative flex h-32 w-[16rem] shrink-0 snap-start items-center justify-center overflow-hidden rounded-lg border border-white/10 bg-white/5 px-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/15 hover:bg-white/8">
+                <div className="relative z-10 flex h-16 w-full items-center justify-center">
+                  {!logoFailed && item.logo ? (
+                    <Image
+                      src={item.logo}
+                      alt={item.name}
+                      width={144}
+                      height={64}
+                      className="h-14 w-auto object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100"
+                      onError={() => onLogoError(item.name)}
+                    />
+                  ) : (
+                    <div className="text-center">
+                      <span className="block text-lg font-medium tracking-tight text-white">
+                        {item.name}
+                      </span>
+                      {item.status ? (
+                        <span className="mt-2 block text-xs font-medium uppercase tracking-[0.18em] text-cyan-200/75">
+                          {item.status}
+                        </span>
+                      ) : null}
+                    </div>
+                  )}
+
+                  {/* The floating label keeps the logo readable while still revealing the project name on hover. */}
+                  <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <span
+                      className="px-3 py-1 text-lg font-medium tracking-tight text-white sm:text-xl"
+                      style={{ textShadow: "0 2px 10px rgba(0, 0, 0, 0.65)" }}
+                    >
                       {item.name}
                     </span>
-                    {item.status ? (
-                      <span className="mt-2 block text-xs font-medium uppercase tracking-[0.18em] text-cyan-200/75">
-                        {item.status}
-                      </span>
-                    ) : null}
                   </div>
-                )}
-
-                {/* The floating label keeps the logo readable while still revealing the project name on hover. */}
-                <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <span
-                    className="px-3 py-1 text-lg font-medium tracking-tight text-white sm:text-xl"
-                    style={{ textShadow: "0 2px 10px rgba(0, 0, 0, 0.65)" }}
-                  >
-                    {item.name}
-                  </span>
                 </div>
               </div>
-            </div>
-          );
-
-          if (item.href) {
-            return (
-              <Link key={item.name} href={item.href} className="block">
-                {content}
-              </Link>
             );
-          }
 
-          return <div key={item.name}>{content}</div>;
-        })}
+            if (item.href) {
+              return (
+                <Link key={item.name} href={item.href} className="block">
+                  {content}
+                </Link>
+              );
+            }
+
+            return <div key={item.name}>{content}</div>;
+          })}
+        </div>
       </div>
     </div>
   );

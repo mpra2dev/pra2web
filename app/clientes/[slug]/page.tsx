@@ -28,26 +28,46 @@ export default async function ClientPage({ params }: ClientPageProps) {
   return (
     <main className="min-h-screen bg-neutral-950 text-white">
       <div className="relative isolate min-h-screen overflow-hidden">
-        {/* A low-contrast grid gives the detail page the same technical depth as the home without fighting the content. */}
+        <style>{`
+          @keyframes hero-grid-move {
+            0% {
+              background-position:
+                0px 0px,
+                0px 0px;
+            }
+            100% {
+              background-position:
+                60px 60px,
+                60px 60px;
+            }
+          }
+        `}</style>
+
+        {/* Dark base anchors the page and matches the hero surface on home. */}
+        <div className="absolute inset-0 -z-40 bg-neutral-950" />
+
+        {/* The moving grid mirrors the home hero so the case-study pages feel part of the same visual system. */}
         <div
           className="absolute inset-0 -z-30"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
+              "linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px)",
             backgroundSize: "60px 60px",
+            animation: "hero-grid-move 12s linear infinite",
           }}
         />
 
-        {/* Soft brand glows add premium depth while keeping the reading surface dark and controlled. */}
+        {/* Brand glows reuse the same palette distribution as the hero for a consistent animated backdrop. */}
         <div
           className="absolute inset-0 -z-20"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 20% 20%, rgba(76,161,252,0.12), transparent 60%), radial-gradient(circle at 80% 0%, rgba(192,38,211,0.10), transparent 60%), radial-gradient(circle at 50% 100%, rgba(34,197,94,0.08), transparent 60%)",
+              "radial-gradient(circle at 30% 20%, rgba(76,161,252,0.12), transparent 60%), radial-gradient(circle at 70% 0%, rgba(192,38,211,0.1), transparent 60%), radial-gradient(circle at 50% 80%, rgba(34,197,94,0.08), transparent 60%)",
           }}
         />
 
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),transparent_18%),radial-gradient(circle_at_top,rgba(255,255,255,0.05),transparent_30%)]" />
+        {/* The same center fade keeps content readable and prevents the motion from taking over. */}
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),rgba(255,255,255,0.015)_28%,rgba(10,10,10,0.12)_60%,rgba(10,10,10,0.38)_84%)]" />
 
         <Navbar />
         <section className="px-4 pb-24 pt-14 sm:px-6 sm:pt-20 lg:px-8">
@@ -120,7 +140,7 @@ export default async function ClientPage({ params }: ClientPageProps) {
 
             {/* The content is divided into three clear sections so the page reads like a concise, useful case study instead of a long sales wall. */}
             <div className="mt-14 space-y-8">
-              <section className="rounded-2xl border border-white/10 bg-white/5 p-8 sm:p-10">
+              <section className="rounded-2xl border border-white/10 bg-white/5 p-8 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.18)] sm:p-10">
                 <h2 className="text-2xl font-semibold tracking-[-0.04em] text-white">
                   El punto de partida
                 </h2>
@@ -130,7 +150,7 @@ export default async function ClientPage({ params }: ClientPageProps) {
                 </p>
               </section>
 
-              <section className="rounded-2xl border border-white/10 bg-white/5 p-8 sm:p-10">
+              <section className="rounded-2xl border border-white/10 bg-white/5 p-8 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.18)] sm:p-10">
                 <h2 className="text-2xl font-semibold tracking-[-0.04em] text-white">
                   Que hicimos
                 </h2>
@@ -140,7 +160,7 @@ export default async function ClientPage({ params }: ClientPageProps) {
                 </p>
               </section>
 
-              <section className="rounded-2xl border border-white/10 bg-white/5 p-8 sm:p-10">
+              <section className="rounded-2xl border border-white/10 bg-white/5 p-8 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.18)] sm:p-10">
                 <h2 className="text-2xl font-semibold tracking-[-0.04em] text-white">
                   Resultados
                 </h2>
@@ -149,7 +169,7 @@ export default async function ClientPage({ params }: ClientPageProps) {
                   {client.outcomes.map((outcome) => (
                     <li
                       key={outcome}
-                      className="rounded-xl border border-white/10 bg-white/4 px-5 py-4 text-base leading-7 text-neutral-200"
+                      className="rounded-xl border border-white/10 bg-white/4 px-5 py-4 text-base leading-7 text-neutral-200 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.18)]"
                     >
                       {outcome}
                     </li>
@@ -174,7 +194,7 @@ export default async function ClientPage({ params }: ClientPageProps) {
                 href={client.siteUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-lg border border-white/12 bg-white/4 px-5 py-3 text-sm font-semibold tracking-[0.01em] text-white/90 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/8 hover:text-white"
+                className="inline-flex items-center justify-center rounded-lg border border-white/12 bg-white/4 px-5 py-3 text-sm font-semibold tracking-[0.01em] text-white/90 transition-all duration-200 hover:scale-[1.02] hover:border-white/20 hover:bg-white/8 hover:text-white active:scale-[0.98]"
               >
                 Ver sitio web
               </a>
@@ -188,7 +208,7 @@ export default async function ClientPage({ params }: ClientPageProps) {
 
               <Link
                 href="/#contacto"
-                className="mt-8 inline-flex items-center justify-center rounded-lg bg-[linear-gradient(45deg,#a855f7_0%,#4ca1fc_52%,#22c55e_100%)] px-5 py-3 text-sm font-semibold tracking-[0.01em] text-white shadow-[0_10px_28px_rgba(76,161,252,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(34,197,94,0.18)]"
+                className="mt-8 inline-flex items-center justify-center rounded-lg bg-[linear-gradient(45deg,#a855f7_0%,#4ca1fc_52%,#22c55e_100%)] px-5 py-3 text-sm font-semibold tracking-[0.01em] text-white shadow-[0_10px_28px_rgba(76,161,252,0.22)] transition-all duration-200 ease-out hover:scale-[1.02] hover:shadow-[0_16px_36px_rgba(34,197,94,0.18)] active:scale-[0.98]"
               >
                 Solicitar propuesta
               </Link>

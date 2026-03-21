@@ -1,72 +1,209 @@
+"use client";
+
+import type { SVGProps } from "react";
+
+import { useInView } from "@/hooks/useInView";
+
+function CompassIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" {...props}>
+      <path
+        d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="m15.5 8.5-2.6 5.1-5.1 2.6 2.6-5.1 5.1-2.6Z"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function LayoutIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" {...props}>
+      <rect
+        x="3"
+        y="4"
+        width="18"
+        height="16"
+        rx="2.5"
+        strokeWidth="1.8"
+      />
+      <path
+        d="M9 4v16M9 10h12"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function BoltIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" {...props}>
+      <path
+        d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function RocketIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" {...props}>
+      <path
+        d="M14 4c3.8 0 6 2.2 6 6 0 3.3-2.6 6.7-7.8 10-1 .6-2.2.6-3.2 0C3.8 16.7 1.2 13.3 1.2 10c0-3.8 2.2-6 6-6 2.1 0 3.7.8 4.8 2.3C10.3 4.8 11.9 4 14 4Z"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M12 8.5h.01"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 const steps = [
   {
     number: "01",
     title: "Entendemos tu objetivo",
     description:
-      "Analizamos tu producto, tu publico y que necesitas conseguir",
+      "Aterrizamos tu producto, el tipo de cliente al que vas y la accion que la web debe provocar.",
+    icon: CompassIcon,
+    accent:
+      "from-[rgba(168,85,247,0.22)] via-[rgba(76,161,252,0.12)] to-transparent",
+    tag: "Diagnostico rapido",
   },
   {
     number: "02",
-    title: "Disenamos para convertir",
+    title: "Diseñamos para convertir",
     description:
-      "Estructuramos la landing enfocada a generar clientes desde la primera visita",
+      "Ordenamos mensaje, jerarquia y llamadas a la accion para que la visita tenga una direccion clara.",
+    icon: LayoutIcon,
+    accent:
+      "from-[rgba(76,161,252,0.22)] via-[rgba(255,255,255,0.08)] to-transparent",
+    tag: "Estructura y copy",
   },
   {
     number: "03",
     title: "Construimos rapido",
-    description: "Desarrollo agil, sin procesos eternos ni bloqueos",
+    description:
+      "Desarrollo agil y entregable real, sin cadenas eternas de revisiones ni bloqueos innecesarios.",
+    icon: BoltIcon,
+    accent:
+      "from-[rgba(34,197,94,0.2)] via-[rgba(76,161,252,0.12)] to-transparent",
+    tag: "Entrega en dias",
   },
   {
     number: "04",
     title: "Lanzamos y optimizamos",
-    description: "Tu web lista para captar clientes en dias, no meses",
+    description:
+      "Publicamos con todo listo para captar clientes y dejamos la base preparada para iterar despues.",
+    icon: RocketIcon,
+    accent:
+      "from-[rgba(255,255,255,0.12)] via-[rgba(168,85,247,0.16)] to-transparent",
+    tag: "Salida a mercado",
   },
 ];
 
 export function Process() {
-  return (
-    <section id="proceso" className="relative overflow-hidden bg-neutral-950 py-24">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.05),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(76,161,252,0.06),transparent_24%)]" />
+  const { ref, isVisible } = useInView<HTMLDivElement>({
+    threshold: 0.18,
+    rootMargin: "0px 0px -8% 0px",
+  });
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  return (
+    <section
+      id="proceso"
+      className="relative overflow-hidden bg-neutral-950 py-24 sm:py-28"
+    >
+      {/* Background layers give the process block more atmosphere so it feels like a deliberate section, not a plain list. */}
+      <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.05),transparent_24%),radial-gradient(circle_at_18%_26%,rgba(76,161,252,0.08),transparent_28%),radial-gradient(circle_at_82%_18%,rgba(168,85,247,0.08),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(34,197,94,0.07),transparent_28%)]" />
+      <div className="absolute inset-x-0 top-0 -z-10 h-32 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),transparent)]" />
+
+      <div
+        ref={ref}
+        className={`mx-auto max-w-7xl px-4 transition-all duration-700 ease-out sm:px-6 lg:px-8 ${
+          isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
+        }`}
+      >
         <header className="mx-auto max-w-3xl text-center">
-          <h2 className="text-balance text-3xl font-semibold tracking-[-0.05em] text-white sm:text-4xl lg:text-5xl">
+          <p className="text-sm font-medium uppercase tracking-[0.18em] text-cyan-200/75">
+            Proceso
+          </p>
+
+          <h2 className="mt-5 text-balance text-3xl font-semibold tracking-[-0.05em] text-white sm:text-4xl lg:text-5xl">
             De idea a clientes en dias
           </h2>
 
-          <p className="mt-5 text-pretty text-base leading-7 text-neutral-400 sm:text-lg sm:leading-8">
-            Un proceso simple, rapido y enfocado a resultados
+          <p className="mt-5 text-pretty text-base leading-7 text-neutral-300 sm:text-lg sm:leading-8">
+            Un sistema directo para pasar de una necesidad difusa a una landing
+            lista para vender, sin friccion innecesaria.
           </p>
         </header>
 
-        {/* Layout: stack vertical on mobile and switch to a horizontal flex flow on desktop for a cleaner SaaS-style process. */}
-        <div className="relative mt-16 flex flex-col gap-10 lg:mt-20 lg:flex-row lg:gap-8">
-          {/* Connection line: only visible on desktop and placed absolutely behind the items so the four steps feel part of one flow. */}
-          <div className="pointer-events-none absolute left-0 right-0 top-10 hidden h-px bg-white/10 lg:block" />
+        <div className="relative mt-16 lg:mt-20">
+          {/* The progress line unifies the four cards on desktop, while mobile keeps a clear stacked reading flow. */}
+          <div className="pointer-events-none absolute left-0 right-0 top-12 hidden h-px bg-[linear-gradient(90deg,rgba(255,255,255,0.05),rgba(76,161,252,0.28),rgba(168,85,247,0.24),rgba(34,197,94,0.24),rgba(255,255,255,0.05))] lg:block" />
 
-          {steps.map((step) => (
-            <article
-              key={step.number}
-              className="group relative flex-1 transition-transform duration-300 hover:-translate-y-1"
-            >
-              {/* Responsive: each item keeps generous vertical spacing on mobile, while desktop relies on equal-width columns for precise alignment. */}
-              <div className="relative w-full">
-                <p className="text-5xl font-semibold tracking-[-0.08em] text-neutral-700 sm:text-6xl">
-                  {step.number}
-                </p>
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-4 lg:gap-6">
+            {steps.map((step) => (
+              <article
+                key={step.number}
+                className="group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/8 hover:shadow-[0_22px_48px_rgba(0,0,0,0.2)]"
+              >
+                {/* Each card carries a restrained accent so the sequence feels richer without looking noisy. */}
+                <div
+                  className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${step.accent} opacity-100`}
+                />
 
-                <div className="mt-6 max-w-xs">
-                  <h3 className="text-xl font-semibold tracking-[-0.03em] text-white">
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/10 text-cyan-100 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
+                      <step.icon className="h-5 w-5" aria-hidden="true" />
+                    </div>
+                    <p className="text-5xl font-semibold tracking-[-0.08em] text-white/12 sm:text-6xl">
+                      {step.number}
+                    </p>
+                  </div>
+
+                  <div className="mt-8 rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs font-medium uppercase tracking-[0.16em] text-cyan-200/80">
+                    {step.tag}
+                  </div>
+
+                  <h3 className="mt-6 text-2xl font-semibold tracking-[-0.04em] text-white">
                     {step.title}
                   </h3>
 
-                  <p className="mt-4 text-base leading-7 text-neutral-400">
+                  <p className="mt-4 text-base leading-7 text-neutral-300">
                     {step.description}
                   </p>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <a
+            href="#contacto"
+            className="inline-flex items-center justify-center rounded-lg bg-[linear-gradient(45deg,#a855f7_0%,#4ca1fc_52%,#22c55e_100%)] px-6 py-3 text-sm font-semibold tracking-[0.01em] text-white shadow-[0_10px_28px_rgba(76,161,252,0.22)] transition-all duration-200 ease-out hover:scale-[1.02] hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(34,197,94,0.18)] active:scale-[0.98]"
+          >
+            Empezar proyecto
+          </a>
         </div>
       </div>
     </section>
