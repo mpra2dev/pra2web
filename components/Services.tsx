@@ -91,12 +91,8 @@ export function Services() {
   return (
     <section
       id="servicios"
-      className="relative overflow-hidden bg-neutral-950 py-24 sm:py-28"
+      className="relative overflow-hidden bg-transparent py-24 sm:py-28"
     >
-      {/* Layered glows give this section more character so it feels like a key conversion block, not just another grid. */}
-      <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.1),transparent_28%),radial-gradient(circle_at_80%_18%,rgba(168,85,247,0.1),transparent_24%),radial-gradient(circle_at_bottom_left,rgba(34,197,94,0.08),transparent_30%)]" />
-      <div className="absolute inset-x-0 top-0 -z-10 h-40 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),transparent)]" />
-
       <div
         ref={ref}
         className={`mx-auto max-w-7xl px-4 transition-all duration-700 ease-out sm:px-6 lg:px-8 ${

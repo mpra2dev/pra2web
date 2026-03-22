@@ -28,7 +28,7 @@ export function Hero() {
       {/* Dark base anchors the hero and preserves contrast for the content. */}
       <div className="absolute inset-0 z-0 bg-neutral-950" />
 
-      {/* Technical grid keeps the same subtle drift, but at 12s so the motion feels a bit more present without becoming obvious. */}
+      {/* The animated grid comes back only in the hero so the first screen keeps that technical, premium feel. */}
       <div
         className="absolute inset-0 z-0"
         style={{

@@ -46,7 +46,7 @@ export default async function ClientPage({ params }: ClientPageProps) {
         {/* Dark base anchors the page and matches the hero surface on home. */}
         <div className="absolute inset-0 -z-40 bg-neutral-950" />
 
-        {/* The moving grid mirrors the home hero so the case-study pages feel part of the same visual system. */}
+        {/* The animated grid returns here too so client pages keep the same technical backdrop as the home hero. */}
         <div
           className="absolute inset-0 -z-30"
           style={{

@@ -188,10 +188,8 @@ export function Clients() {
   return (
     <section
       id="clientes"
-      className="relative overflow-hidden bg-neutral-950 py-24"
+      className="relative overflow-hidden bg-transparent py-24"
     >
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.05),transparent_28%),radial-gradient(circle_at_80%_20%,rgba(76,161,252,0.07),transparent_24%),radial-gradient(circle_at_bottom_left,rgba(34,197,94,0.05),transparent_28%)]" />
-
       <div
         ref={ref}
         className={`mx-auto max-w-7xl px-4 transition-all duration-700 ease-out sm:px-6 lg:px-8 ${

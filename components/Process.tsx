@@ -86,6 +86,7 @@ const steps = [
     accent:
       "from-[rgba(168,85,247,0.22)] via-[rgba(76,161,252,0.12)] to-transparent",
     tag: "Diagnostico rapido",
+    timing: "Dia 1",
   },
   {
     number: "02",
@@ -96,6 +97,7 @@ const steps = [
     accent:
       "from-[rgba(76,161,252,0.22)] via-[rgba(255,255,255,0.08)] to-transparent",
     tag: "Estructura y copy",
+    timing: "Dia 2",
   },
   {
     number: "03",
@@ -106,6 +108,7 @@ const steps = [
     accent:
       "from-[rgba(34,197,94,0.2)] via-[rgba(76,161,252,0.12)] to-transparent",
     tag: "Entrega en dias",
+    timing: "Dias 3-4",
   },
   {
     number: "04",
@@ -116,6 +119,7 @@ const steps = [
     accent:
       "from-[rgba(255,255,255,0.12)] via-[rgba(168,85,247,0.16)] to-transparent",
     tag: "Salida a mercado",
+    timing: "Dia 5",
   },
 ];
 
@@ -128,12 +132,8 @@ export function Process() {
   return (
     <section
       id="proceso"
-      className="relative overflow-hidden bg-neutral-950 py-24 sm:py-28"
+      className="relative overflow-hidden bg-transparent py-24 sm:py-28"
     >
-      {/* Background layers give the process block more atmosphere so it feels like a deliberate section, not a plain list. */}
-      <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.05),transparent_24%),radial-gradient(circle_at_18%_26%,rgba(76,161,252,0.08),transparent_28%),radial-gradient(circle_at_82%_18%,rgba(168,85,247,0.08),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(34,197,94,0.07),transparent_28%)]" />
-      <div className="absolute inset-x-0 top-0 -z-10 h-32 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),transparent)]" />
-
       <div
         ref={ref}
         className={`mx-auto max-w-7xl px-4 transition-all duration-700 ease-out sm:px-6 lg:px-8 ${
@@ -153,6 +153,18 @@ export function Process() {
             Un sistema directo para pasar de una necesidad difusa a una landing
             lista para vender, sin friccion innecesaria.
           </p>
+
+          {/* A compact timing strip makes the speed promise concrete before the user scans the detailed steps. */}
+          <div className="mt-8 inline-flex flex-wrap items-center justify-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-neutral-300 backdrop-blur-sm">
+            <span className="text-cyan-200/85">Timing real:</span>
+            <span>estrategia</span>
+            <span className="text-white/20">•</span>
+            <span>diseño</span>
+            <span className="text-white/20">•</span>
+            <span>desarrollo</span>
+            <span className="text-white/20">•</span>
+            <span>lanzamiento en dias</span>
+          </div>
         </header>
 
         <div className="relative mt-16 lg:mt-20">
@@ -183,6 +195,11 @@ export function Process() {
                   <div className="mt-8 rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs font-medium uppercase tracking-[0.16em] text-cyan-200/80">
                     {step.tag}
                   </div>
+
+                  {/* Timing is kept close to the label so each step feels scheduled, not abstract. */}
+                  <p className="mt-4 text-sm font-medium uppercase tracking-[0.16em] text-neutral-400">
+                    {step.timing}
+                  </p>
 
                   <h3 className="mt-6 text-2xl font-semibold tracking-[-0.04em] text-white">
                     {step.title}

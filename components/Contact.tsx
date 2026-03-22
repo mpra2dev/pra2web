@@ -1,6 +1,6 @@
 export function Contact() {
   return (
-    <section id="contacto" className="bg-neutral-950 py-24">
+    <section id="contacto" className="relative overflow-hidden bg-transparent py-24">
       <div className="mx-auto max-w-5xl px-4">
         {/* The panel keeps the CTA concentrated in one premium-looking surface with enough breathing room. */}
         <div className="rounded-2xl border border-white/10 bg-white/5 p-10 backdrop-blur-sm">

@@ -125,12 +125,8 @@ export function Why() {
   return (
     <section
       id="porque"
-      className="relative overflow-hidden bg-neutral-950 py-24 sm:py-28"
+      className="relative overflow-hidden bg-transparent py-24 sm:py-28"
     >
-      {/* Richer ambient layers make this section feel like a key trust block instead of a plain feature list. */}
-      <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_top_left,rgba(76,161,252,0.1),transparent_30%),radial-gradient(circle_at_82%_18%,rgba(168,85,247,0.1),transparent_24%),radial-gradient(circle_at_bottom,rgba(34,197,94,0.08),transparent_30%)]" />
-      <div className="absolute inset-x-0 top-0 -z-10 h-36 bg-[linear-gradient(180deg,rgba(255,255,255,0.035),transparent)]" />
-
       <div
         ref={ref}
         className={`mx-auto max-w-7xl px-4 transition-all duration-700 ease-out sm:px-6 lg:px-8 ${
