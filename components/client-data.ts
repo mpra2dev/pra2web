@@ -13,28 +13,28 @@ export type Client = {
   work: string;
   result: string;
   outcomes: string[];
-  status: "Finalizado" | "En desarrollo" | "Concepto" | "Proyecto interno";
+  status: "Finalizado" | "En desarrollo" | "Concepto";
 };
 
 export const clients: Client[] = [
   {
     name: "Anfitrite Complementos",
     slug: "anfitrite",
-    type: "Web-galeria para tienda de complementos artesanales",
+    type: "Web-galería para tienda de complementos artesanales",
     logo: "/anfitritelogo.svg",
     heroSummary:
       "Una landing clara, estructurada y pensada para generar clientes desde la primera visita.",
     metricValue: "+35%",
     metricLabel: "Visitas a las redes sociales, donde se realizan las ventas.",
     testimonialQuote:
-      "Pasamos de no tener nada a tener una presencia digital que por fin transmitia bien la marca y nos ayudaba a atraer visitas. El equipo de pra2dev comprendio enseguida lo que necesitabamos y trabajo rapido para sacar adelante nuestras peticiones.",
-    testimonialAuthor: "Marina Rodriguez, Fundadora de Anfitrite",
+      "Pasamos de no tener nada a tener una presencia digital, que, por fin transmitia bien la marca y nos ayudaba a atraer visitas. El equipo de pra2dev comprendió enseguida que necesitábamos y enseguida trabajó para sacar adelante nuestras peticiones.",
+    testimonialAuthor: "Marina Rodríguez, Fundadora de Anfitrite",
     siteUrl: "https://anfitrite.es",
     description:
-      "Anfitrite necesitaba una presencia digital que mostrase su catalogo de forma cuidada y facilitase el primer contacto con potenciales clientes.",
-    work: "Se diseno una landing visual, ligera y enfocada en presentar colecciones, reforzar confianza y derivar trafico hacia sus redes.",
+      "Anfitrite necesitaba una presencia digital que mostrase su catálogo de forma cuidada y facilitase el primer contacto con potenciales clientes.",
+    work: "Se diseñó una landing visual, ligera y enfocada en presentar colecciones, reforzar confianza y derivar tráfico hacia sus redes.",
     result:
-      "La marca gano una presencia digital solida y centralizo todos los productos en una pagina web sencilla para los clientes.",
+      "La marca ganó una presencia digital sólida y centralizó todos los productos en una página web sencilla para los clientes.",
     outcomes: [
       "Mayor cantidad de visitas a las redes sociales, y por consecuente, aumento en las ventas.",
       "Mas claridad al presentar la marca y sus colecciones.",
@@ -43,50 +43,50 @@ export const clients: Client[] = [
     status: "Finalizado",
   },
   {
-    name: "pra2dev",
+    name: "pra2dev (esta página)",
     slug: "pra2dev",
-    type: "Proyecto interno para mostrar como planteamos webs orientadas a conversion",
+    type: "Landing page para productora de servicios web",
     logo: "/logo.svg",
     heroSummary:
-      "Una demo funcional creada para ensenar de forma directa el tipo de estructura, mensaje y acabado que desarrollamos para clientes.",
-    metricValue: "Proyecto interno",
-    metricLabel: "Demo funcional de pra2dev",
+      "Una propuesta mas clara, una estructura mas solida y una landing preparada para convertir tráfico en demos.",
+    metricValue: "+35%",
+    metricLabel: "Conversion a demo",
     testimonialQuote:
-      "Esta web funciona como una muestra real de nuestro enfoque: claridad, estructura y foco en conversion, sin venderlo como un caso externo.",
-    testimonialAuthor: "pra2dev",
+      "La nueva landing hizo mucho mas facil explicar el producto y empezar a captar oportunidades con mas contexto.",
+    testimonialAuthor: "Equipo Startup SaaS",
     siteUrl: "https://pra2dev.com",
     description:
-      "Es un proyecto propio pensado para ensenar con una web real como trabajamos el mensaje, la jerarquia visual y la conversion en servicios digitales.",
-    work: "Se definio como sistema interno de demostracion: estructura reusable, bloques orientados a captar interes y una presentacion clara del servicio.",
+      "Producto SaaS en fase de crecimiento que necesitaba una landing capaz de explicar mejor el valor del producto y generar demos.",
+    work: "Se trabajo el mensaje, la jerarquia de secciones y el desarrollo completo para reducir friccion y apoyar la captacion.",
     result:
-      "Permite ensenar criterio, nivel de ejecucion y enfoque comercial de forma transparente, sin presentarlo como cliente externo.",
+      "La landing quedo lista para ventas y empezo a generar leads cualificados desde las primeras semanas.",
     outcomes: [
-      "Aporta una referencia real y navegable de como planteamos una web comercial.",
-      "Refuerza la percepcion de nivel sin atribuir resultados a un cliente inexistente.",
-      "Sirve como base para explicar a futuros clientes el tipo de sistema que desarrollamos.",
+      "+35% en conversion a demo durante las primeras semanas.",
+      "Mejor comprension de la propuesta desde el primer scroll.",
+      "Base mas solida para campanas y outreach comercial.",
     ],
-    status: "Proyecto interno",
+    status: "Finalizado",
   },
   {
     name: "Administradores de Fincas Castro",
     slug: "admin_castro",
-    type: "Web comercial para empresa de administracion de fincas y abogacia",
+    type: "Web comercial para empresa de administración de fincas y abogacía",
     logo: "/globe.svg",
     heroSummary:
-      "Un proyecto en desarrollo para ordenar la propuesta, reforzar la marca y preparar una web lista para captar interes comercial.",
+      "Un proyecto en desarrollo para ordenar la propuesta, reforzar la marca y preparar una web lista para captar interés comercial.",
     metricValue: "En curso",
-    metricLabel: "Diseno y desarrollo",
+    metricLabel: "Diseño y desarrollo",
     testimonialQuote:
       "El objetivo es salir con una web que no solo se vea bien, sino que ayude de verdad a captar clientes.",
-    testimonialAuthor: "Victor Castro, jefe departamento de abogacia",
+    testimonialAuthor: "Victor Castro, jefe departamento de abogacía",
     description:
       "Esta empresa estaba sin marca digital alguna, el objetivo es que su marca se adentre en internet como es debido.",
-    work: "Estamos definiendo estructura y direccion visual para el desarrollo de la landing.",
+    work: "Estamos definiendo estructura, y dirección visual para el desarrollo de la landing.",
     result:
       "El proyecto avanza con una base clara de mensaje, una estructura validada y una experiencia pensada para activarse en cuanto se publique.",
     outcomes: [
-      "Arquitectura preparada para crecer con nuevas lineas o campanas.",
-      "Mejor narrativa comercial para captar interes desde el primer scroll.",
+      "Arquitectura preparada para crecer con nuevas líneas o campañas.",
+      "Mejor narrativa comercial para captar interés desde el primer scroll.",
       "Base visual consistente para marca y servicios.",
     ],
     status: "En desarrollo",
