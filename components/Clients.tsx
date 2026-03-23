@@ -14,25 +14,13 @@ type ShowcaseItem = {
   status?: string;
 };
 
-const completedProjects: ShowcaseItem[] = clients.map((client) => ({
-  name: client.name,
-  logo: client.logo,
-  href: `/clientes/${client.slug}`,
-}));
-
-const ongoingProjects: ShowcaseItem[] = [
-  {
-    name: "Proyecto Retail",
-    status: "En curso",
-  },
-  {
-    name: "Startup B2B",
-    status: "En curso",
-  },
-  {
-    name: "Marca DTC",
-    status: "En curso",
-  },
+const projects: ShowcaseItem[] = [
+  ...clients.map((client) => ({
+    name: client.name,
+    logo: client.logo,
+    href: `/clientes/${client.slug}`,
+    status: client.status,
+  })),
 ];
 
 function ArrowLeftIcon() {
@@ -126,6 +114,12 @@ function ShowcaseRail({
             const logoFailed = item.logo ? failedLogos[item.name] : true;
             const content = (
               <div className="group relative flex h-32 w-[16rem] shrink-0 snap-start items-center justify-center overflow-hidden rounded-lg border border-white/10 bg-white/5 px-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/15 hover:bg-white/8">
+                {item.status ? (
+                  <span className="absolute left-4 top-4 z-20 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                    {item.status}
+                  </span>
+                ) : null}
+
                 <div className="relative z-10 flex h-16 w-full items-center justify-center">
                   {!logoFailed && item.logo ? (
                     <Image
@@ -141,11 +135,6 @@ function ShowcaseRail({
                       <span className="block text-lg font-medium tracking-tight text-white">
                         {item.name}
                       </span>
-                      {item.status ? (
-                        <span className="mt-2 block text-xs font-medium uppercase tracking-[0.18em] text-cyan-200/75">
-                          {item.status}
-                        </span>
-                      ) : null}
                     </div>
                   )}
 
@@ -208,22 +197,9 @@ export function Clients() {
         </div>
 
         <ShowcaseRail
-          title="Proyectos completados"
-          subtitle="Casos ya entregados y enfocados a generar resultados reales."
-          items={completedProjects}
-          failedLogos={failedLogos}
-          onLogoError={(key) =>
-            setFailedLogos((current) => ({
-              ...current,
-              [key]: true,
-            }))
-          }
-        />
-
-        <ShowcaseRail
-          title="Proyectos en curso"
-          subtitle="Trabajos activos que estamos desarrollando ahora mismo."
-          items={ongoingProjects}
+          title="Proyectos"
+          subtitle="Una mezcla de trabajos finalizados, desarrollos activos y conceptos en exploracion."
+          items={projects}
           failedLogos={failedLogos}
           onLogoError={(key) =>
             setFailedLogos((current) => ({

@@ -1,6 +1,13 @@
 "use client";
 
+import Link from "next/link";
+
+import { clients } from "@/components/client-data";
 import { useInView } from "@/hooks/useInView";
+
+const castroClient = clients.find(
+  (client) => client.name === "Administradores de Fincas Castro",
+);
 
 const testimonials = [
   {
@@ -9,8 +16,11 @@ const testimonials = [
     author: "Startup SaaS",
   },
   {
-    quote: "La diferencia en conversiones fue inmediata.",
-    author: "Proyecto financiado",
+    quote:
+      castroClient?.testimonialQuote ??
+      "El objetivo es salir con una web que no solo se vea bien, sino que ayude de verdad a captar clientes.",
+    author: castroClient?.name ?? "Administradores de Fincas Castro",
+    href: castroClient ? `/clientes/${castroClient.slug}` : undefined,
   },
   {
     quote:
@@ -49,8 +59,7 @@ export function Testimonials() {
           </h2>
 
           <p className="mt-5 text-pretty text-base leading-7 text-neutral-300 sm:text-lg sm:leading-8">
-            No hacemos webs para que esten online. Las hacemos para que
-            conviertan.
+            No hacemos webs para que estén Online, las hacemos para que sean una herramienta principal dentro de tu negocio.
           </p>
         </div>
 
@@ -61,14 +70,29 @@ export function Testimonials() {
               key={testimonial.author}
               className="rounded-xl border border-white/10 bg-white/5 p-8 transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/8"
             >
-              {/* Each testimonial keeps the quote dominant and the author secondary so scanning stays fast and credible. */}
-              <p className="text-lg leading-8 text-white sm:text-[1.15rem]">
-                &ldquo;{testimonial.quote}&rdquo;
-              </p>
+              {testimonial.href ? (
+                <Link href={testimonial.href} className="block">
+                  {/* Each testimonial keeps the quote dominant and the author secondary so scanning stays fast and credible. */}
+                  <p className="text-lg leading-8 text-white sm:text-[1.15rem]">
+                    &ldquo;{testimonial.quote}&rdquo;
+                  </p>
 
-              <p className="mt-6 text-sm font-medium tracking-[0.08em] text-cyan-200/80 uppercase">
-                {testimonial.author}
-              </p>
+                  <p className="mt-6 text-sm font-medium tracking-[0.08em] text-cyan-200/80 uppercase">
+                    {testimonial.author}
+                  </p>
+                </Link>
+              ) : (
+                <>
+                  {/* Each testimonial keeps the quote dominant and the author secondary so scanning stays fast and credible. */}
+                  <p className="text-lg leading-8 text-white sm:text-[1.15rem]">
+                    &ldquo;{testimonial.quote}&rdquo;
+                  </p>
+
+                  <p className="mt-6 text-sm font-medium tracking-[0.08em] text-cyan-200/80 uppercase">
+                    {testimonial.author}
+                  </p>
+                </>
+              )}
             </article>
           ))}
         </div>
