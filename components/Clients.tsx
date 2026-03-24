@@ -10,6 +10,7 @@ import { useInView } from "@/hooks/useInView";
 type ShowcaseItem = {
   name: string;
   logo?: string;
+  logoClassName?: string;
   href?: string;
   status?: string;
 };
@@ -18,6 +19,7 @@ const projects: ShowcaseItem[] = [
   ...clients.map((client) => ({
     name: client.name,
     logo: client.logo,
+    logoClassName: client.logoClassName,
     href: `/clientes/${client.slug}`,
     status: client.status,
   })),
@@ -125,7 +127,9 @@ function ShowcaseRail({
                       alt={item.name}
                       width={144}
                       height={64}
-                      className="h-14 w-auto object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100"
+                      className={`object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 ${
+                        item.logoClassName ?? "h-14 w-auto"
+                      }`}
                       onError={() => onLogoError(item.name)}
                     />
                   ) : (

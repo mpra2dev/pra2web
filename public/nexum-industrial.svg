@@ -1,20 +1,132 @@
-<svg width="240" height="72" viewBox="0 0 240 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="8" y="12" width="48" height="48" rx="16" fill="#0B1220"/>
-  <rect x="8.75" y="12.75" width="46.5" height="46.5" rx="15.25" stroke="url(#panelStroke)" stroke-opacity="0.7" stroke-width="1.5"/>
-  <path d="M32 18L42.39 24V36L32 42L21.61 36V24L32 18Z" stroke="#E5E7EB" stroke-width="2" stroke-linejoin="round"/>
-  <path d="M25 41V27.5L32 34.5L39 27.5V41" stroke="#F9FAFB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M39 23.5L44 26.4V33.4" stroke="#22C55E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="43.8" cy="36.8" r="2.2" fill="#22C55E"/>
-  <path d="M72 46V26H77.3L88.7 39.5V26H94V46H88.9L77.3 32.2V46H72Z" fill="#F9FAFB"/>
-  <path d="M101 46V26H116.8V30.6H106.3V34H115.7V38.5H106.3V41.4H117V46H101Z" fill="#F9FAFB"/>
-  <path d="M123 46V26H128.3L139.7 39.5V26H145V46H139.9L128.3 32.2V46H123Z" fill="#F9FAFB"/>
-  <path d="M151 46V26H156.3L167.7 39.5V26H173V46H167.9L156.3 32.2V46H151Z" fill="#F9FAFB"/>
-  <path d="M180 46V26H195.8V30.6H185.3V34H194.7V38.5H185.3V41.4H196V46H180Z" fill="#F9FAFB"/>
-  <path d="M202 46V26H207.3L218.7 39.5V26H224V46H218.9L207.3 32.2V46H202Z" fill="#F9FAFB"/>
-  <defs>
-    <linearGradient id="panelStroke" x1="8" y1="12" x2="56" y2="60" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#4CA1FC"/>
-      <stop offset="1" stop-color="#22C55E"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="240"
+   height="72"
+   viewBox="0 0 240 72"
+   fill="none"
+   version="1.1"
+   id="svg11"
+   sodipodi:docname="nexum-industrial.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="3.7"
+     inkscape:cx="171.89189"
+     inkscape:cy="60.945946"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="906"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg11" />
+  <rect
+     x="8"
+     y="12"
+     width="48"
+     height="48"
+     rx="16"
+     fill="#0B1220"
+     id="rect1" />
+  <rect
+     x="8.75"
+     y="12.75"
+     width="46.5"
+     height="46.5"
+     rx="15.25"
+     stroke="url(#panelStroke)"
+     stroke-opacity="0.7"
+     stroke-width="1.5"
+     id="rect2" />
+  <path
+     d="M32 18L42.39 24V36L32 42L21.61 36V24L32 18Z"
+     stroke="#E5E7EB"
+     stroke-width="2"
+     stroke-linejoin="round"
+     id="path2" />
+  <circle
+     cx="46.772972"
+     cy="49.232433"
+     r="2.2"
+     fill="#22c55e"
+     id="circle4" />
+  <defs
+     id="defs11">
+    <rect
+       x="63.513513"
+       y="15.945946"
+       width="172.97297"
+       height="42.972973"
+       id="rect12" />
+    <rect
+       x="75.135135"
+       y="16.486486"
+       width="118.91892"
+       height="39.189189"
+       id="rect11" />
+    <linearGradient
+       id="panelStroke"
+       x1="8"
+       y1="12"
+       x2="56"
+       y2="60"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#4CA1FC"
+         id="stop10" />
+      <stop
+         offset="1"
+         stop-color="#22C55E"
+         id="stop11" />
     </linearGradient>
   </defs>
+  <text
+     xml:space="preserve"
+     id="text11"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:Webdings;-inkscape-font-specification:Webdings;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect12);fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:17.2233;stroke-opacity:1"
+     inkscape:label="A" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;line-height:0;font-family:Webdings;-inkscape-font-specification:Webdings;text-align:start;letter-spacing:3.71px;word-spacing:0.01px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#e5e7eb;fill-opacity:1;stroke:#ffffff;stroke-width:17.2233;stroke-opacity:0.169872"
+     x="80.000008"
+     y="38.648647"
+     id="text13"><tspan
+       sodipodi:role="line"
+       id="tspan13"
+       x="80.000008"
+       y="38.648647"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.6667px;line-height:0;font-family:Georgia;-inkscape-font-specification:'Georgia Bold';letter-spacing:3.71px;word-spacing:0.01px;direction:ltr;stroke:#ffffff;stroke-opacity:0;fill:#e5e7eb;fill-opacity:1"
+       dx="4.8899999">NEXUM</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:0;font-family:Georgia;-inkscape-font-specification:Georgia;text-align:start;letter-spacing:0px;word-spacing:0.01px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#e5e7eb;fill-opacity:1;stroke:#ffffff;stroke-width:17.2233;stroke-opacity:0"
+     x="74.324326"
+     y="54.324326"
+     id="text14"><tspan
+       sodipodi:role="line"
+       id="tspan14"
+       x="74.324326"
+       y="54.324326"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;font-family:Georgia;-inkscape-font-specification:'Georgia Italic';letter-spacing:0px;fill:#e5e7eb;fill-opacity:1">More than industry</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:24px;line-height:0;font-family:Georgia;-inkscape-font-specification:'Georgia Bold';text-align:start;letter-spacing:0px;word-spacing:0.01px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#e5e7eb;fill-opacity:1;stroke:#b4c8e5;stroke-width:17.2233;stroke-opacity:0"
+     x="21.891891"
+     y="48.108109"
+     id="text15"><tspan
+       sodipodi:role="line"
+       id="tspan15"
+       x="21.891891"
+       y="48.108109"
+       style="font-size:24px;fill:#7c8695;fill-opacity:1;stroke:#a9c8f0;stroke-opacity:0">N</tspan></text>
 </svg>

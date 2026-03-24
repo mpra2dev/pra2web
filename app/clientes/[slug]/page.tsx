@@ -93,7 +93,9 @@ export default async function ClientPage({ params }: ClientPageProps) {
                       alt={client.name}
                       width={320}
                       height={128}
-                      className="h-24 w-auto object-contain opacity-95 sm:h-28 lg:h-32"
+                      className={`object-contain opacity-95 ${
+                        client.heroLogoClassName ?? "h-24 w-auto sm:h-28 lg:h-32"
+                      }`}
                     />
                   </div>
 

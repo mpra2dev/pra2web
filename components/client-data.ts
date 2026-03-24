@@ -3,6 +3,8 @@ export type Client = {
   slug: string;
   type: string;
   logo: string;
+  logoClassName?: string;
+  heroLogoClassName?: string;
   heroSummary: string;
   metricValue: string;
   metricLabel: string;
@@ -96,6 +98,8 @@ export const clients: Client[] = [
     slug: "nexum-industrial",
     type: "Landing corporativa para empresa de mantenimiento industrial",
     logo: "/nexum-industrial.svg",
+    logoClassName: "h-auto w-full max-w-[11.5rem] opacity-95 sm:max-w-[13.5rem]",
+    heroLogoClassName: "h-auto w-full max-w-[16rem] sm:max-w-[18rem] lg:max-w-[20rem]",
     heroSummary:
       "Una demo sectorial pensada para transmitir capacidad técnica, orden operativo y confianza comercial desde el primer vistazo.",
     metricValue: "Concepto",
