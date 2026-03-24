@@ -27,17 +27,17 @@ export const clients: Client[] = [
     metricValue: "+35%",
     metricLabel: "Visitas a las redes sociales, donde se realizan las ventas.",
     testimonialQuote:
-      "Pasamos de no tener nada a tener una presencia digital, que, por fin transmitia bien la marca y nos ayudaba a atraer visitas. El equipo de pra2dev comprendió enseguida que necesitábamos y enseguida trabajó para sacar adelante nuestras peticiones.",
-    testimonialAuthor: "Marina Rodríguez, Fundadora de Anfitrite",
+      "Pasamos de no tener nada a tener una presencia digital que, por fin, transmitía bien la marca y nos ayudaba a atraer visitas. El equipo de pra2dev comprendió enseguida lo que necesitábamos y trabajó rápido para sacar adelante nuestras peticiones.",
+    testimonialAuthor: "Marina Rodríguez, fundadora de Anfitrite",
     siteUrl: "https://anfitrite.es",
     description:
       "Anfitrite necesitaba una presencia digital que mostrase su catálogo de forma cuidada y facilitase el primer contacto con potenciales clientes.",
-    work: "Se diseñó una landing visual, ligera y enfocada en presentar colecciones, reforzar confianza y derivar tráfico hacia sus redes.",
+    work: "Se diseñó una landing visual, ligera y enfocada en presentar colecciones, reforzar la confianza y derivar tráfico hacia sus redes.",
     result:
-      "La marca ganó una presencia digital sólida y centralizó todos los productos en una página web sencilla para los clientes.",
+      "La marca ganó una presencia digital sólida y centralizó todos sus productos en una página web sencilla para los clientes.",
     outcomes: [
-      "Mayor cantidad de visitas a las redes sociales, y por consecuente, aumento en las ventas.",
-      "Mas claridad al presentar la marca y sus colecciones.",
+      "Mayor cantidad de visitas a las redes sociales y, por consecuente, aumento en las ventas.",
+      "Más claridad al presentar la marca y sus colecciones.",
       "Mejor experiencia para descubrir productos y contactar.",
     ],
     status: "Finalizado",
@@ -48,22 +48,22 @@ export const clients: Client[] = [
     type: "Landing page para productora de servicios web",
     logo: "/logo.svg",
     heroSummary:
-      "Una propuesta mas clara, una estructura mas solida y una landing preparada para convertir tráfico en demos.",
+      "Una propuesta más clara, una estructura más sólida y una landing preparada para convertir tráfico en demos.",
     metricValue: "+35%",
-    metricLabel: "Conversion a demo",
+    metricLabel: "Conversión a demo",
     testimonialQuote:
-      "La nueva landing hizo mucho mas facil explicar el producto y empezar a captar oportunidades con mas contexto.",
+      "La nueva landing hizo mucho más fácil explicar el producto y empezar a captar oportunidades con más contexto.",
     testimonialAuthor: "Equipo Startup SaaS",
     siteUrl: "https://pra2dev.com",
     description:
       "Producto SaaS en fase de crecimiento que necesitaba una landing capaz de explicar mejor el valor del producto y generar demos.",
-    work: "Se trabajo el mensaje, la jerarquia de secciones y el desarrollo completo para reducir friccion y apoyar la captacion.",
+    work: "Se trabajó el mensaje, la jerarquía de secciones y el desarrollo completo para reducir fricción y apoyar la captación.",
     result:
-      "La landing quedo lista para ventas y empezo a generar leads cualificados desde las primeras semanas.",
+      "La landing quedó lista para ventas y empezó a generar leads cualificados desde las primeras semanas.",
     outcomes: [
-      "+35% en conversion a demo durante las primeras semanas.",
-      "Mejor comprension de la propuesta desde el primer scroll.",
-      "Base mas solida para campanas y outreach comercial.",
+      "+35% en conversión a demo durante las primeras semanas.",
+      "Mejor comprensión de la propuesta desde el primer scroll.",
+      "Base más sólida para campañas y outreach comercial.",
     ],
     status: "Finalizado",
   },
@@ -78,10 +78,10 @@ export const clients: Client[] = [
     metricLabel: "Diseño y desarrollo",
     testimonialQuote:
       "El objetivo es salir con una web que no solo se vea bien, sino que ayude de verdad a captar clientes.",
-    testimonialAuthor: "Victor Castro, jefe departamento de abogacía",
+    testimonialAuthor: "Víctor Castro, jefe del departamento de abogacía",
     description:
-      "Esta empresa estaba sin marca digital alguna, el objetivo es que su marca se adentre en internet como es debido.",
-    work: "Estamos definiendo estructura, y dirección visual para el desarrollo de la landing.",
+      "Esta empresa estaba sin marca digital alguna; el objetivo es que su marca se adentre en internet como es debido.",
+    work: "Estamos definiendo la estructura y la dirección visual para el desarrollo de la landing.",
     result:
       "El proyecto avanza con una base clara de mensaje, una estructura validada y una experiencia pensada para activarse en cuanto se publique.",
     outcomes: [
@@ -92,26 +92,26 @@ export const clients: Client[] = [
     status: "En desarrollo",
   },
   {
-    name: "Demo AI Scheduler",
-    slug: "demo-ai-scheduler",
-    type: "Concepto de producto para automatizar la coordinacion de reuniones",
-    logo: "/window.svg",
+    name: "Nexum Industrial",
+    slug: "nexum-industrial",
+    type: "Landing corporativa para empresa de mantenimiento industrial",
+    logo: "/nexum-industrial.svg",
     heroSummary:
-      "Una demo conceptual para explorar como presentar un producto AI con mas claridad, confianza y sensacion de valor desde la primera visita.",
+      "Una demo sectorial pensada para transmitir capacidad técnica, orden operativo y confianza comercial desde el primer vistazo.",
     metricValue: "Concepto",
-    metricLabel: "Demo de producto",
+    metricLabel: "Demo sectorial B2B",
     testimonialQuote:
-      "La demo sirve para validar narrativa, interfaz y sensacion de producto antes de convertirlo en una version comercial completa.",
-    testimonialAuthor: "Concept Lab",
+      "La propuesta muestra con claridad cómo presentar servicios técnicos complejos de forma más directa, más creíble y más orientada al contacto comercial.",
+    testimonialAuthor: "Demo sectorial",
     description:
-      "Concepto orientado a mostrar un producto AI que organiza agendas, reduce friccion operativa y simplifica la coordinacion de reuniones.",
-    work: "Se planteo una demo de marca, mensaje y experiencia para testear como vender el producto antes de invertir en una version final.",
+      "Concepto de landing para una empresa de mantenimiento industrial enfocada en presentar servicios, reforzar la confianza técnica y facilitar solicitudes de presupuesto.",
+    work: "Se planteó una estructura estática con enfoque comercial para ordenar servicios de mantenimiento preventivo, correctivo y asistencia técnica en planta.",
     result:
-      "La demo deja lista una direccion clara para evolucionar hacia una landing o MVP con una propuesta mucho mas facil de comunicar.",
+      "La demo deja definida una dirección clara para convertir una empresa industrial compleja en una propuesta más comprensible, más seria y más fácil de vender online.",
     outcomes: [
-      "Narrativa validable para un producto todavia en exploracion.",
-      "Concepto visual util para demos, feedback y presentaciones.",
-      "Base estrategica para evolucionar hacia MVP o landing comercial.",
+      "Mensaje más claro para captar interés comercial desde la primera visita.",
+      "Estructura válida para presentar servicios técnicos sin saturar al usuario.",
+      "Base reutilizable para una futura web corporativa orientada a captación.",
     ],
     status: "Concepto",
   },

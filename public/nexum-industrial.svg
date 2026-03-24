@@ -1,0 +1,20 @@
+<svg width="240" height="72" viewBox="0 0 240 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="8" y="12" width="48" height="48" rx="16" fill="#0B1220"/>
+  <rect x="8.75" y="12.75" width="46.5" height="46.5" rx="15.25" stroke="url(#panelStroke)" stroke-opacity="0.7" stroke-width="1.5"/>
+  <path d="M32 18L42.39 24V36L32 42L21.61 36V24L32 18Z" stroke="#E5E7EB" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M25 41V27.5L32 34.5L39 27.5V41" stroke="#F9FAFB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M39 23.5L44 26.4V33.4" stroke="#22C55E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="43.8" cy="36.8" r="2.2" fill="#22C55E"/>
+  <path d="M72 46V26H77.3L88.7 39.5V26H94V46H88.9L77.3 32.2V46H72Z" fill="#F9FAFB"/>
+  <path d="M101 46V26H116.8V30.6H106.3V34H115.7V38.5H106.3V41.4H117V46H101Z" fill="#F9FAFB"/>
+  <path d="M123 46V26H128.3L139.7 39.5V26H145V46H139.9L128.3 32.2V46H123Z" fill="#F9FAFB"/>
+  <path d="M151 46V26H156.3L167.7 39.5V26H173V46H167.9L156.3 32.2V46H151Z" fill="#F9FAFB"/>
+  <path d="M180 46V26H195.8V30.6H185.3V34H194.7V38.5H185.3V41.4H196V46H180Z" fill="#F9FAFB"/>
+  <path d="M202 46V26H207.3L218.7 39.5V26H224V46H218.9L207.3 32.2V46H202Z" fill="#F9FAFB"/>
+  <defs>
+    <linearGradient id="panelStroke" x1="8" y1="12" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4CA1FC"/>
+      <stop offset="1" stop-color="#22C55E"/>
+    </linearGradient>
+  </defs>
+</svg>

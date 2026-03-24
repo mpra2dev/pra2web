@@ -81,45 +81,45 @@ const steps = [
     number: "01",
     title: "Entendemos tu objetivo",
     description:
-      "Aterrizamos tu producto, el tipo de cliente al que vas y la accion que la web debe provocar.",
+      "Aterrizamos tu producto, el tipo de cliente al que vas y la acción que la web debe provocar.",
     icon: CompassIcon,
     accent:
       "from-[rgba(168,85,247,0.22)] via-[rgba(76,161,252,0.12)] to-transparent",
-    tag: "Diagnostico rapido",
-    timing: "Dia 1",
+    tag: "Diagnóstico rápido",
+    timing: "Día 1",
   },
   {
     number: "02",
     title: "Diseñamos para convertir",
     description:
-      "Ordenamos mensaje, jerarquia y llamadas a la accion para que la visita tenga una direccion clara.",
+      "Ordenamos mensaje, jerarquía y llamadas a la acción para que la visita tenga una dirección clara.",
     icon: LayoutIcon,
     accent:
       "from-[rgba(76,161,252,0.22)] via-[rgba(255,255,255,0.08)] to-transparent",
     tag: "Estructura y copy",
-    timing: "Dia 2",
+    timing: "Día 2",
   },
   {
     number: "03",
-    title: "Construimos rapido",
+    title: "Construimos rápido",
     description:
-      "Desarrollo agil y entregable real, sin cadenas eternas de revisiones ni bloqueos innecesarios.",
+      "Desarrollo ágil y entregable real, sin cadenas eternas de revisiones ni bloqueos innecesarios.",
     icon: BoltIcon,
     accent:
       "from-[rgba(34,197,94,0.2)] via-[rgba(76,161,252,0.12)] to-transparent",
-    tag: "Entrega en dias",
-    timing: "Dias 3-4",
+    tag: "Entrega en días",
+    timing: "Días 3-4",
   },
   {
     number: "04",
     title: "Lanzamos y optimizamos",
     description:
-      "Publicamos con todo listo para captar clientes y dejamos la base preparada para iterar despues.",
+      "Publicamos con todo listo para captar clientes y dejamos la base preparada para iterar después.",
     icon: RocketIcon,
     accent:
       "from-[rgba(255,255,255,0.12)] via-[rgba(168,85,247,0.16)] to-transparent",
     tag: "Salida a mercado",
-    timing: "Dia 5",
+    timing: "Día 5",
   },
 ];
 
@@ -132,7 +132,7 @@ export function Process() {
   return (
     <section
       id="proceso"
-      className="relative overflow-hidden bg-transparent py-24 sm:py-28"
+      className="relative overflow-hidden bg-transparent py-16 sm:py-24 lg:py-28"
     >
       <div
         ref={ref}
@@ -146,16 +146,15 @@ export function Process() {
           </p>
 
           <h2 className="mt-5 text-balance text-3xl font-semibold tracking-[-0.05em] text-white sm:text-4xl lg:text-5xl">
-            De idea a clientes en dias
+            De idea a clientes en días
           </h2>
 
           <p className="mt-5 text-pretty text-base leading-7 text-neutral-300 sm:text-lg sm:leading-8">
             Un sistema directo para pasar de una necesidad difusa a una landing
-            lista para vender, sin friccion innecesaria.
+            lista para vender, sin fricción innecesaria.
           </p>
 
-          {/* A compact timing strip makes the speed promise concrete before the user scans the detailed steps. */}
-          <div className="mt-8 inline-flex flex-wrap items-center justify-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-neutral-300 backdrop-blur-sm">
+          <div className="mt-6 hidden flex-wrap items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-neutral-300 backdrop-blur-sm sm:mt-8 sm:inline-flex sm:gap-3">
             <span className="text-cyan-200/85">Timing real:</span>
             <span>estrategia</span>
             <span className="text-white/20">•</span>
@@ -163,21 +162,19 @@ export function Process() {
             <span className="text-white/20">•</span>
             <span>desarrollo</span>
             <span className="text-white/20">•</span>
-            <span>lanzamiento en dias</span>
+            <span>lanzamiento en días</span>
           </div>
         </header>
 
-        <div className="relative mt-16 lg:mt-20">
-          {/* The progress line unifies the four cards on desktop, while mobile keeps a clear stacked reading flow. */}
+        <div className="relative mt-12 sm:mt-16 lg:mt-20">
           <div className="pointer-events-none absolute left-0 right-0 top-12 hidden h-px bg-[linear-gradient(90deg,rgba(255,255,255,0.05),rgba(76,161,252,0.28),rgba(168,85,247,0.24),rgba(34,197,94,0.24),rgba(255,255,255,0.05))] lg:block" />
 
-          <div className="grid grid-cols-1 gap-6 lg:grid-cols-4 lg:gap-6">
+          <div className="grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-4 lg:gap-6">
             {steps.map((step) => (
               <article
                 key={step.number}
-                className="group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/8 hover:shadow-[0_22px_48px_rgba(0,0,0,0.2)]"
+                className="group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/8 hover:shadow-[0_22px_48px_rgba(0,0,0,0.2)] sm:p-8"
               >
-                {/* Each card carries a restrained accent so the sequence feels richer without looking noisy. */}
                 <div
                   className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${step.accent} opacity-100`}
                 />
@@ -192,20 +189,19 @@ export function Process() {
                     </p>
                   </div>
 
-                  <div className="mt-8 rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs font-medium uppercase tracking-[0.16em] text-cyan-200/80">
+                  <div className="mt-4 rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs font-medium uppercase tracking-[0.16em] text-cyan-200/80 sm:mt-8">
                     {step.tag}
                   </div>
 
-                  {/* Timing is kept close to the label so each step feels scheduled, not abstract. */}
                   <p className="mt-4 text-sm font-medium uppercase tracking-[0.16em] text-neutral-400">
                     {step.timing}
                   </p>
 
-                  <h3 className="mt-6 text-2xl font-semibold tracking-[-0.04em] text-white">
+                  <h3 className="mt-4 text-xl font-semibold tracking-[-0.04em] text-white sm:mt-6 sm:text-2xl">
                     {step.title}
                   </h3>
 
-                  <p className="mt-4 text-base leading-7 text-neutral-300">
+                  <p className="mt-3 hidden text-base leading-7 text-neutral-300 sm:block">
                     {step.description}
                   </p>
                 </div>
@@ -214,7 +210,7 @@ export function Process() {
           </div>
         </div>
 
-        <div className="mt-12 flex justify-center">
+        <div className="mt-8 hidden justify-center sm:mt-12 sm:flex">
           <a
             href="#contacto"
             className="inline-flex items-center justify-center rounded-lg bg-[linear-gradient(45deg,#a855f7_0%,#4ca1fc_52%,#22c55e_100%)] px-6 py-3 text-sm font-semibold tracking-[0.01em] text-white shadow-[0_10px_28px_rgba(76,161,252,0.22)] transition-all duration-200 ease-out hover:scale-[1.02] hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(34,197,94,0.18)] active:scale-[0.98]"

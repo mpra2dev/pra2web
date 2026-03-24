@@ -76,7 +76,7 @@ function ShowcaseRail({
   };
 
   return (
-    <div className="mt-14">
+    <div className="mt-10 sm:mt-14">
       <div>
         <div>
           <h3 className="text-2xl font-semibold tracking-[-0.04em] text-white sm:text-3xl">
@@ -86,8 +86,7 @@ function ShowcaseRail({
         </div>
       </div>
 
-      <div className="relative mt-8">
-        {/* Desktop arrows sit on the rail sides so the interaction reads like a carousel, while mobile keeps native touch scrolling. */}
+      <div className="relative mt-6 sm:mt-8">
         <button
           type="button"
           aria-label={`Desplazar ${title} a la izquierda`}
@@ -105,15 +104,14 @@ function ShowcaseRail({
           <ArrowRightIcon />
         </button>
 
-        {/* The rail uses native horizontal scrolling so mobile gets touch scroll and desktop gets button-driven movement without loop artifacts. */}
         <div
           ref={railRef}
-          className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-3 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-3 [scrollbar-width:none] [-ms-overflow-style:none] sm:gap-5 [&::-webkit-scrollbar]:hidden"
         >
           {items.map((item) => {
             const logoFailed = item.logo ? failedLogos[item.name] : true;
             const content = (
-              <div className="group relative flex h-32 w-[16rem] shrink-0 snap-start items-center justify-center overflow-hidden rounded-lg border border-white/10 bg-white/5 px-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/15 hover:bg-white/8">
+              <div className="group relative flex h-28 w-[14rem] shrink-0 snap-start items-center justify-center overflow-hidden rounded-lg border border-white/10 bg-white/5 px-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/15 hover:bg-white/8 sm:h-32 sm:w-[16rem] sm:px-6">
                 {item.status ? (
                   <span className="absolute left-4 top-4 z-20 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
                     {item.status}
@@ -138,7 +136,6 @@ function ShowcaseRail({
                     </div>
                   )}
 
-                  {/* The floating label keeps the logo readable while still revealing the project name on hover. */}
                   <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     <span
                       className="px-3 py-1 text-lg font-medium tracking-tight text-white sm:text-xl"
@@ -177,7 +174,7 @@ export function Clients() {
   return (
     <section
       id="clientes"
-      className="relative overflow-hidden bg-transparent py-24"
+      className="relative overflow-hidden bg-transparent py-16 sm:py-24"
     >
       <div
         ref={ref}
@@ -187,18 +184,18 @@ export function Clients() {
       >
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-balance text-3xl font-semibold tracking-[-0.05em] text-white sm:text-4xl lg:text-5xl">
-            Proyectos que ya estan generando resultados
+            Casos, proyectos en marcha y demos sectoriales
           </h2>
 
           <p className="mt-5 text-pretty text-base leading-7 text-neutral-300 sm:text-lg sm:leading-8">
-            No hacemos webs para que esten online. Las hacemos para que
-            conviertan.
+            Una selección de trabajos finalizados, proyectos en desarrollo y
+            conceptos creados para explorar nuevas oportunidades comerciales.
           </p>
         </div>
 
         <ShowcaseRail
           title="Proyectos"
-          subtitle="Una mezcla de trabajos finalizados, desarrollos activos y conceptos en exploracion."
+          subtitle="Trabajos reales, proyectos activos y una demo sectorial para enseñar cómo planteamos nuevas propuestas."
           items={projects}
           failedLogos={failedLogos}
           onLogoError={(key) =>

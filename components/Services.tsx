@@ -53,16 +53,16 @@ const services = [
   {
     title: "Landing que convierte",
     description:
-      "Estructura, mensaje y jerarquia visual orientados a transformar trafico en conversaciones reales.",
+      "Estructura, mensaje y jerarquía visual orientados a transformar tráfico en conversaciones reales.",
     icon: SparkIcon,
     accent:
       "from-[rgba(168,85,247,0.22)] via-[rgba(76,161,252,0.16)] to-[rgba(34,197,94,0.12)]",
-    stat: "Mas claridad desde el primer scroll",
+    stat: "Más claridad desde el primer scroll",
   },
   {
-    title: "Ejecucion en dias",
+    title: "Ejecución en días",
     description:
-      "Procesos cortos, decisiones rapidas y una entrega pensada para salir al mercado sin meses de espera.",
+      "Procesos cortos, decisiones rápidas y una entrega pensada para salir al mercado sin meses de espera.",
     icon: FlashIcon,
     accent:
       "from-[rgba(76,161,252,0.22)] via-[rgba(255,255,255,0.08)] to-transparent",
@@ -71,11 +71,11 @@ const services = [
   {
     title: "Optimizadas para subvenciones",
     description:
-      "Una web con nivel visual y enfoque comercial, preparada para justificar inversion y proyectar solidez.",
+      "Una web con nivel visual y enfoque comercial, preparada para justificar inversión y proyectar solidez.",
     icon: ShieldIcon,
     accent:
       "from-[rgba(34,197,94,0.2)] via-[rgba(76,161,252,0.14)] to-transparent",
-    stat: "Mejor presentacion para proyectos financiados",
+    stat: "Mejor presentación para proyectos financiados",
   },
 ];
 
@@ -91,7 +91,7 @@ export function Services() {
   return (
     <section
       id="servicios"
-      className="relative overflow-hidden bg-transparent py-24 sm:py-28"
+      className="relative overflow-hidden bg-transparent py-16 sm:py-24 lg:py-28"
     >
       <div
         ref={ref}
@@ -109,15 +109,14 @@ export function Services() {
             cliente a avanzar.
           </h2>
 
-          <p className="mt-5 text-pretty text-base leading-7 text-neutral-300 sm:text-lg sm:leading-8">
-            Cada entrega combina claridad comercial, sensacion premium y foco
-            en conversion para que tu pagina no se quede en presentacion.
+          <p className="mt-4 text-pretty text-sm leading-6 text-neutral-300 sm:mt-5 sm:text-lg sm:leading-8">
+            Cada entrega combina claridad comercial, sensación premium y foco
+            en conversión para que tu página no se quede en presentación.
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:gap-8">
-          <article className="group relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-8 shadow-[0_30px_80px_rgba(0,0,0,0.22)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_36px_90px_rgba(0,0,0,0.28)] sm:p-10">
-            {/* The featured card carries the strongest visual weight so the section has a clear focal point. */}
+        <div className="mt-12 grid grid-cols-1 gap-4 sm:mt-16 sm:gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:gap-8">
+          <article className="group relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-6 shadow-[0_30px_80px_rgba(0,0,0,0.22)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_36px_90px_rgba(0,0,0,0.28)] sm:p-10">
             <div
               className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${featuredService.accent} opacity-100`}
             />
@@ -129,22 +128,22 @@ export function Services() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/10 text-cyan-100 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
                     <featuredService.icon className="h-5 w-5" aria-hidden="true" />
                   </div>
-                  <span className="text-sm font-medium uppercase tracking-[0.18em] text-cyan-200/75">
+                  <span className="text-xs font-medium uppercase tracking-[0.18em] text-cyan-200/75 sm:text-sm">
                     Servicio principal
                   </span>
                 </div>
 
-                <h3 className="mt-8 max-w-xl text-3xl font-semibold tracking-[-0.05em] text-white sm:text-4xl">
+                <h3 className="mt-5 max-w-xl text-2xl font-semibold tracking-[-0.05em] text-white sm:mt-8 sm:text-4xl">
                   {featuredService.title}
                 </h3>
 
-                <p className="mt-5 max-w-2xl text-base leading-8 text-neutral-200 sm:text-lg">
+                <p className="mt-3 max-w-2xl text-sm leading-6 text-neutral-200 sm:mt-5 sm:text-lg sm:leading-8">
                   {featuredService.description}
                 </p>
               </div>
 
-              <div className="mt-10 grid gap-4 border-t border-white/10 pt-6 sm:grid-cols-2">
-                <div className="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 backdrop-blur-sm">
+              <div className="mt-6 grid gap-3 border-t border-white/10 pt-4 sm:mt-10 sm:gap-4 sm:pt-6 sm:grid-cols-2">
+                <div className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3.5 backdrop-blur-sm sm:px-5 sm:py-4">
                   <p className="text-sm font-medium uppercase tracking-[0.16em] text-neutral-400">
                     Lo que aporta
                   </p>
@@ -152,7 +151,7 @@ export function Services() {
                     {featuredService.stat}
                   </p>
                 </div>
-                <div className="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 backdrop-blur-sm">
+                <div className="hidden rounded-2xl border border-white/10 bg-black/20 px-4 py-3.5 backdrop-blur-sm sm:block sm:px-5 sm:py-4">
                   <p className="text-sm font-medium uppercase tracking-[0.16em] text-neutral-400">
                     Enfoque
                   </p>
@@ -164,13 +163,12 @@ export function Services() {
             </div>
           </article>
 
-          <div className="grid grid-cols-1 gap-6">
+          <div className="grid grid-cols-1 gap-4 sm:gap-6">
             {secondaryServices.map((service) => (
               <article
                 key={service.title}
-                className="group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/8 hover:shadow-[0_20px_45px_rgba(0,0,0,0.2)]"
+                className="group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/8 hover:shadow-[0_20px_45px_rgba(0,0,0,0.2)] sm:p-8"
               >
-                {/* Secondary cards stay cleaner, but still get enough depth and contrast to avoid looking flat. */}
                 <div
                   className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${service.accent} opacity-100`}
                 />
@@ -180,15 +178,15 @@ export function Services() {
                     <service.icon className="h-5 w-5" aria-hidden="true" />
                   </div>
 
-                  <h3 className="mt-6 text-2xl font-semibold tracking-[-0.03em] text-white">
+                  <h3 className="mt-4 text-xl font-semibold tracking-[-0.03em] text-white sm:mt-6 sm:text-2xl">
                     {service.title}
                   </h3>
 
-                  <p className="mt-4 text-base leading-7 text-neutral-300">
+                  <p className="mt-3 hidden text-base leading-7 text-neutral-300 sm:block">
                     {service.description}
                   </p>
 
-                  <div className="mt-6 rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm font-medium text-cyan-100/90">
+                  <div className="mt-3 rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm font-medium text-cyan-100/90 sm:mt-6">
                     {service.stat}
                   </div>
                 </div>
@@ -197,7 +195,7 @@ export function Services() {
           </div>
         </div>
 
-        <div className="mt-12 flex justify-center">
+        <div className="mt-8 hidden justify-center sm:mt-12 sm:flex">
           <a
             href="#contacto"
             className="inline-flex items-center justify-center rounded-lg bg-[linear-gradient(45deg,#a855f7_0%,#4ca1fc_52%,#22c55e_100%)] px-6 py-3 text-sm font-semibold tracking-[0.01em] text-white shadow-[0_10px_28px_rgba(76,161,252,0.22)] transition-all duration-200 ease-out hover:scale-[1.02] hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(34,197,94,0.18)] active:scale-[0.98]"

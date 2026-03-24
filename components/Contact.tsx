@@ -1,9 +1,9 @@
 export function Contact() {
   return (
-    <section id="contacto" className="relative overflow-hidden bg-transparent py-24">
-      <div className="mx-auto max-w-5xl px-4">
+    <section id="contacto" className="relative overflow-hidden bg-transparent py-16 sm:py-24">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6">
         {/* The panel keeps the CTA concentrated in one premium-looking surface with enough breathing room. */}
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-10 backdrop-blur-sm">
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm sm:p-10">
           {/* A short, direct header reduces friction and frames the next step clearly. */}
           <div className="max-w-2xl">
             <h2 className="text-balance text-3xl font-semibold tracking-[-0.05em] text-white sm:text-4xl">
@@ -15,8 +15,8 @@ export function Contact() {
           </div>
 
           {/* Two columns on desktop separate the direct-email shortcut from the form without adding visual noise. */}
-          <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-14">
-            <div className="flex flex-col justify-between rounded-2xl border border-white/10 bg-black/20 p-8">
+          <div className="mt-8 grid grid-cols-1 gap-5 sm:mt-12 sm:gap-10 lg:grid-cols-2 lg:gap-14">
+            <div className="hidden flex-col justify-between rounded-2xl border border-white/10 bg-black/20 p-6 sm:flex sm:p-8">
               <div>
                 <p className="text-sm font-medium uppercase tracking-[0.18em] text-cyan-200/75">
                   Contacto directo
@@ -31,7 +31,7 @@ export function Contact() {
               </div>
 
               {/* This CTA gives low-friction users a faster route without competing with the main form. */}
-              <div className="mt-8">
+              <div className="mt-6 sm:mt-8">
                 <a
                   href="mailto:info@pra2dev.com"
                   className="inline-flex w-full items-center justify-center gap-3 rounded-lg border border-white/20 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,255,255,0.86))] px-6 py-3.5 text-base font-semibold tracking-[0.01em] text-neutral-950 shadow-[0_12px_34px_rgba(255,255,255,0.12)] transition-all duration-200 ease-out hover:scale-[1.02] hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(255,255,255,0.16)] active:scale-[0.98]"
@@ -60,7 +60,7 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-black/20 p-8">
+            <div className="rounded-2xl border border-white/10 bg-black/20 p-5 sm:p-8">
               {/* The form stays intentionally simple so the user can complete it in a few seconds. */}
               <form className="space-y-5">
                 <div>
@@ -105,7 +105,7 @@ export function Contact() {
                   <textarea
                     id="proyecto"
                     name="proyecto"
-                    rows={5}
+                    rows={4}
                     placeholder="Que quieres lanzar, mejorar o validar"
                     className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition-all duration-200 placeholder:text-neutral-400 focus:border-cyan-300/60 focus:ring-2 focus:ring-cyan-400/40"
                   />
