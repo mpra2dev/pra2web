@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
 import { CookieConsent } from "@/components/CookieConsent";
-import { Footer } from "@/components/Footer";
+import { FooterRouter } from "@/components/FooterRouter";
 
 import "./globals.css";
 
@@ -73,7 +73,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased`}
       >
         <div className="flex-1">{children}</div>
-        <Footer />
+        <FooterRouter />
         <CookieConsent />
       </body>
     </html>

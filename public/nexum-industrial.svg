@@ -21,13 +21,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="3.7"
-     inkscape:cx="171.89189"
-     inkscape:cy="60.945946"
-     inkscape:window-width="1920"
-     inkscape:window-height="1009"
-     inkscape:window-x="-8"
-     inkscape:window-y="906"
+     inkscape:zoom="7.4"
+     inkscape:cx="149.7973"
+     inkscape:cy="35.337838"
+     inkscape:window-width="3200"
+     inkscape:window-height="1711"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg11" />
   <rect
@@ -93,7 +93,7 @@
   <text
      xml:space="preserve"
      id="text11"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:Webdings;-inkscape-font-specification:Webdings;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect12);fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:17.2233;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:Webdings;-inkscape-font-specification:Webdings;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect12);display:inline;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:17.2233;stroke-opacity:1"
      inkscape:label="A" />
   <text
      xml:space="preserve"
@@ -118,15 +118,22 @@
        x="74.324326"
        y="54.324326"
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;font-family:Georgia;-inkscape-font-specification:'Georgia Italic';letter-spacing:0px;fill:#e5e7eb;fill-opacity:1">More than industry</tspan></text>
+  <circle
+     cx="217.84865"
+     cy="36.713512"
+     r="2.2"
+     fill="#22c55e"
+     id="circle4-9" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:24px;line-height:0;font-family:Georgia;-inkscape-font-specification:'Georgia Bold';text-align:start;letter-spacing:0px;word-spacing:0.01px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#e5e7eb;fill-opacity:1;stroke:#b4c8e5;stroke-width:17.2233;stroke-opacity:0"
-     x="21.891891"
-     y="48.108109"
-     id="text15"><tspan
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:31.5201px;line-height:0;font-family:Georgia;-inkscape-font-specification:'Georgia Bold';text-align:start;letter-spacing:0px;word-spacing:0.0131334px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#e5e7eb;fill-opacity:1;stroke:#e5e7eb;stroke-width:0.828;stroke-dasharray:none;stroke-opacity:1"
+     x="18.872213"
+     y="50.686325"
+     id="text15"
+     transform="scale(0.99713374,1.0028745)"><tspan
        sodipodi:role="line"
        id="tspan15"
-       x="21.891891"
-       y="48.108109"
-       style="font-size:24px;fill:#7c8695;fill-opacity:1;stroke:#a9c8f0;stroke-opacity:0">N</tspan></text>
+       x="18.872213"
+       y="50.686325"
+       style="font-size:31.5201px;fill:#7c8695;fill-opacity:1;stroke:#e5e7eb;stroke-width:0.828;stroke-dasharray:none;stroke-opacity:1">N</tspan></text>
 </svg>

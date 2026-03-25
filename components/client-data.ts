@@ -94,8 +94,8 @@ export const clients: Client[] = [
     status: "En desarrollo",
   },
   {
-    name: "Nexum Industrial",
-    slug: "nexum-industrial",
+    name: "Nexum Industries",
+    slug: "nexum-industries",
     type: "Landing corporativa para empresa de mantenimiento industrial",
     logo: "/nexum-industrial.svg",
     logoClassName: "h-auto w-full max-w-[11.5rem] opacity-95 sm:max-w-[13.5rem]",
